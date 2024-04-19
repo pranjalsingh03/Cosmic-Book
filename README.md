@@ -1,27 +1,41 @@
-# CosmicBook
+# Cosmic Book
+The project aims to develop a dynamic online platform dedicated to comic books and novels enthusiasts. This platform will offer a subscription-based model for users to access a vast library of digital comic books and novels. Additionally, it will provide an opportunity for users to upload their own content and earn revenue through a payment system.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
 
-## Development server
+## Project Overview:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Cosmic Book is a web application developed using Angular, designed to provide users with a platform to explore and discover a universe of books. This project aims to create an intuitive and user-friendly interface where users can browse through a diverse collection of books and view details.
 
-## Code scaffolding
+## Key Features:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Responsive Design:**
+   - Ensure the website is optimized for various devices and screen sizes for seamless user experience across desktops, tablets, and smartphones.
 
-## Build
+2. **User Authentication and Profiles:**
+   - Users can create accounts, log in, and manage their profiles.
+   - Profile settings include options to update personal information and manage subscription plans.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. **Subscription Management:**
+   - Offer various subscription plans (monthly, yearly) with different levels of access.
+   - Secure payment gateway integration for subscription payments.
 
-## Running unit tests
+4. **Content Library:**
+   - Curate a diverse collection of comic books and novels across genres.
+   - Implement a user-friendly interface for browsing and searching for titles.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+5. **Reading Interface:**
+   - Develop an interactive reader interface for smooth and immersive reading experiences.
+   - Support for different reading modes, such as single-page view, double-page view, and panel-by-panel view for comics.
 
-## Running end-to-end tests
+6. **User Upload Feature:**
+   - Allow registered users to upload their own comic books and novels.
+   - Implement a review and approval system to ensure content quality and adherence to guidelines.
+   - Define a payment system where content creators earn revenue based on views or downloads of their uploaded content.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+7. **Rating and Review System:**
+   - Enable users to rate and leave reviews for the content they have read.
+   - Utilize feedback to improve content recommendations and user experience.
 
-## Further help
+## Project Timeline:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This project, "Cosmic Book," is scheduled to be completed within 2 days, utilizing Angular. During this time frame, during the development I will focus on learning AngularJS concepts, setting up the project structure, implementing core features, and ensuring a seamless user experience.
