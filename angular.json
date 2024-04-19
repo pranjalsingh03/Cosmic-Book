@@ -102,6 +102,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/cosmic-book",
+            "netlifyToken": "nfp_7b9a6XDgoyfyqwMLt1ahaJ7EeCEe35Wd2266",
+            "siteId": ""
+          }
         }
       }
     }
