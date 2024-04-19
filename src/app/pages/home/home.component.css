@@ -1,0 +1,92 @@
+.navbar {
+    background-color: #0e232f;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.slide-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.prev,
+.next {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* For desktop */
+.cards-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.card {
+    width: 18rem;
+    margin-right: 10px;
+}
+
+.card:last-child {
+    margin-right: 0;
+}
+
+.card img {
+    height: 300px;
+    object-fit: cover;
+}
+
+/* For mobile */
+@media (max-width: 767px) {
+    .cards-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-x: visible;
+    }
+
+    .card {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 80%;
+    }
+}
