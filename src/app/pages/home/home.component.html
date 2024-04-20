@@ -1,37 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Cosmic book</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Browse</a>
-                </li>
-            </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search" />
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Write</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Settings</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Log in</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<app-header></app-header>
 <div class="slider-container">
     <div class="slider">
         <div class="slide">
@@ -63,50 +30,20 @@
         <div class="col-12">
             <h1 class="fav-genres">Headliners</h1>
             <div class="cards-container">
-                <div class="card">
-                    <img src="https://neovel.io/V2/book/image?bookId=9142&oldApp=false&imageExtension=0"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">The Billionaire's Unauthentic Daughter</h5>
-                        <p class="card-text">Romance</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://neovel.io/V2/book/image?bookId=6011&oldApp=false&imageExtension=0"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Forge of Destiny</h5>
-                        <p class="card-text">Fantasy</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://neovel.io/V2/book/image?bookId=10685&oldApp=false&imageExtension=0"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">The Overwoods.</h5>
-                        <p class="card-text">Action</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://neovel.io/V2/book/image?bookId=9053&oldApp=false&imageExtension=0"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Something Between Us</h5>
-                        <p class="card-text">Youth literature</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://neovel.io/V2/book/image?bookId=8549&oldApp=false&imageExtension=0"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Devil's Triangle</h5>
-                        <p class="card-text">Adventure</p>
-                    </div>
+                <div class="card" *ngFor="let book of books">
+                    <a [routerLink]="'/read/' + book.id">
+                        <img [src]="book.coverImage" class="card-img-top" alt="{{ book.title }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ book.title }}</h5>
+                            <p class="card-text">{{ book.genre }}</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 <!-- Favourite sec -->
 <div class="container">
