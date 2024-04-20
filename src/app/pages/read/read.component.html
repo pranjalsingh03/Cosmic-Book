@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div *ngIf="selectedBook" class="book-details">
+    <div class="book-header">
+        <h2>{{ selectedBook?.title }}</h2>
+        <h3>By {{ selectedBook?.author }}</h3>
+        <h4>Genre: {{ selectedBook?.genre }}</h4>
+    </div>
+    <div class="book-content">
+        <img [src]="selectedBook?.coverImage" alt="{{ selectedBook?.title }}" class="book-cover">
+        <div class="reading-items">
+            <div *ngFor="let readingItem of selectedBook?.readingItems" class="reading-item">
+                <h4>Chapter {{ readingItem?.chapterNumber }}: {{ readingItem?.title }}</h4>
+                <p>{{ readingItem?.content }}</p>
+            </div>
+        </div>
+    </div>
+</div>
