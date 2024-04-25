@@ -10,11 +10,19 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit{
   books: any[]=[];
-
+  romance: any[]=[];
+  fantasy: any[]=[];
+  action: any[]=[];
+  adventure: any[]=[];
+  
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
     this.loadBooks();
+    this.loadRomance();
+    this.loadFantasy();
+    this.loadAction();
+    this.loadAdventure();
     $(document).ready(function() {
       $('.next').click(function() {
         $('.slider').animate({
@@ -38,10 +46,10 @@ export class HomeComponent implements OnInit{
   loadBooks() {
     this.http.get<any>('http://localhost:4200/assets/book.json').subscribe({
       next: (data) => {
-        console.log('Fetched data:', data);
+        // console.log('Fetched data:', data);
         if (Array.isArray(data.books)) {
           this.books = data.books;
-          console.log('Books:', this.books);
+          // console.log('Books:', this.books);
         } else {
           console.error('Invalid data format. Expected an array.');
         }
@@ -51,7 +59,70 @@ export class HomeComponent implements OnInit{
       }
     });
   }
-  
+  loadRomance(){
+    this.http.get<any>('http://localhost:4200/assets/romance.json').subscribe({
+      next: (data) => {
+        // console.log('Fetched data:', data);
+        if (Array.isArray(data.romance)) {
+          this.romance = data.romance;
+          // console.log('Romance:', this.romance);
+        } else {
+          console.error('Invalid data format. Expected an array.');
+        }
+      },
+      error: (err) => {
+        console.error('Error loading romance:', err);
+      }
+    });
+  }
+  loadFantasy(){
+    this.http.get<any>('http://localhost:4200/assets/fantasy.json').subscribe({
+      next:(data)=>{
+        // console.log('Fetched data:', data);
+        if(Array.isArray(data.fantasy)){
+          this.fantasy = data.fantasy;
+          // console.log('Fantasy:', this.fantasy);
+        }else{
+          console.error('Invalid data format. Expected an array.');
+        }
+      },
+      error:(err)=>{
+        console.error('Error loading fantasy:', err);
+      }
+    });
+  }
+  loadAction(){
+    this.http.get<any>('http://localhost:4200/assets/action.json').subscribe({
+      next:(data)=>{
+        // console.log('Fetched data:', data);
+        if(Array.isArray(data.action)){
+          this.action = data.action;
+          // console.log('Action:', this.action);
+        }else{
+          console.error('Invalid data format. Expected an array.');
+        }
+      },
+      error:(err)=>{
+        console.error('Error loading action:', err);
+      }
+    });
+  }
+  loadAdventure(){
+    this.http.get<any>('http://localhost:4200/assets/adventure.json').subscribe({
+      next:(data)=>{
+        // console.log('Fetched data:', data);
+        if(Array.isArray(data.adventure)){
+          this.adventure = data.adventure;
+          // console.log('Adventure:', this.adventure);
+        }else{
+          console.error('Invalid data format. Expected an array.');
+        }
+      },
+      error:(err)=>{
+        console.error('Error loading adventure:', err);
+      }
+    });
+  }
   
   goToBook(type: string, id: string) {
     this.router.navigate(['book', type, id]);
