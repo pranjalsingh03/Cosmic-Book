@@ -1,0 +1,74 @@
+.login-container {
+    text-align: center;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.login-container h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.login-container p {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.google-login {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.or-divider {
+    margin-bottom: 20px;
+}
+
+.or-divider span {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form .forgot-password {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.login-form button {
+    width: 100%;
+    background-color: #009688;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: #009688;
+    text-decoration: none;
+}

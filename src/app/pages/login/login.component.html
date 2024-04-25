@@ -1,1 +1,16 @@
-<p>login works!</p>
+<div class="login-container">
+    <h1>Cosmic Books</h1>
+    <p>living stories together.</p>
+    <button class="google-login">Log in with Google</button>
+    <div class="or-divider">
+        <span>OR</span>
+    </div>
+    <form class="login-form" (ngSubmit)="login()">
+        <input type="email" placeholder="Email" [(ngModel)]="email" [ngModelOptions]="{ standalone: true }">
+<input type="password" placeholder="Password" [(ngModel)]="password" [ngModelOptions]="{ standalone: true }">
+
+        <div class="forgot-password">Forgot password?</div>
+        <button type="submit">Log in</button>
+    </form>
+    <div class="signup-link">Don't have an account? <a href="/signup">Sign Up</a></div>
+</div>

@@ -9,12 +9,18 @@ import { WriteComponent } from './pages/write/write.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { ReadComponent } from './pages/read/read.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './pages/footer/footer.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'write', component: WriteComponent },
-  { path: 'read/:id', component: ReadComponent }
+  { path: 'signup', component: SignupComponent},
+  { path: 'read/:id', component: ReadComponent },
+  { path: "read/fantasy/:id", component: ReadComponent },
+  { path: "read/romance/:id", component: ReadComponent },
 ];
 
 @NgModule({
@@ -24,12 +30,15 @@ const routes: Routes = [
     LoginComponent,
     WriteComponent,
     HeaderComponent,
-    ReadComponent
+    ReadComponent,
+    FooterComponent,
+    SignupComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
