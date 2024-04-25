@@ -11,12 +11,21 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Browse</a>
+                    <a class="nav-link" href="/browse">Browse</a>
                 </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search" />
+            <form class="d-flex position-relative" (submit)="onSearch()">
+                <input class="form-control me-2" type="search" placeholder="Search" [(ngModel)]="searchTerm" name="search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
+                <div *ngIf="isSearchPopupOpen" class="search-popup">
+                    <div *ngIf="searchResults.length > 0" class="search-results">
+                        <div *ngFor="let result of searchResults" class="search-result">
+                            {{ result.title }}
+                            <button class="btn btn-primary ml-4" (click)="goToDetailsPage(result.id)">Read More</button>
+                        </div>
+                    </div>
+                    <div (click)="closeSearchPopup()" class="overlay"></div>
+                </div>
             </form>
             <ul class="navbar-nav">
                 <li class="nav-item">
