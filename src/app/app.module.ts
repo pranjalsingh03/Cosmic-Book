@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './pages/footer/footer.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { FormsModule } from '@angular/forms';
+import { BrowseComponent } from './pages/browse/browse.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'write', component: WriteComponent },
   { path: 'signup', component: SignupComponent},
   { path: 'read/:id', component: ReadComponent },
+  { path: 'browse', component: BrowseComponent},
   { path: "read/fantasy/:id", component: ReadComponent },
   { path: "read/romance/:id", component: ReadComponent },
 ];
@@ -32,7 +34,8 @@ const routes: Routes = [
     HeaderComponent,
     ReadComponent,
     FooterComponent,
-    SignupComponent
+    SignupComponent,
+    BrowseComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
