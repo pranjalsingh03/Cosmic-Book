@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit{
     });    
   }
   loadBooks() {
-    this.http.get<any>('http://localhost:4200/assets/book.json').subscribe({
+    this.http.get<any>('https://cosmic-book.vercel.app/assets/book.json').subscribe({
       next: (data) => {
         // console.log('Fetched data:', data);
         if (Array.isArray(data.books)) {
@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit{
     });
   }
   loadRomance(){
-    this.http.get<any>('http://localhost:4200/assets/romance.json').subscribe({
+    this.http.get<any>('https://cosmic-book.vercel.app/assets/romance.json').subscribe({
       next: (data) => {
         // console.log('Fetched data:', data);
         if (Array.isArray(data.romance)) {
@@ -76,7 +76,7 @@ export class HomeComponent implements OnInit{
     });
   }
   loadFantasy(){
-    this.http.get<any>('http://localhost:4200/assets/fantasy.json').subscribe({
+    this.http.get<any>('https://cosmic-book.vercel.app/assets/fantasy.json').subscribe({
       next:(data)=>{
         // console.log('Fetched data:', data);
         if(Array.isArray(data.fantasy)){
@@ -92,7 +92,7 @@ export class HomeComponent implements OnInit{
     });
   }
   loadAction(){
-    this.http.get<any>('http://localhost:4200/assets/action.json').subscribe({
+    this.http.get<any>('https://cosmic-book.vercel.app/assets/action.json').subscribe({
       next:(data)=>{
         // console.log('Fetched data:', data);
         if(Array.isArray(data.action)){
@@ -108,7 +108,7 @@ export class HomeComponent implements OnInit{
     });
   }
   loadAdventure(){
-    this.http.get<any>('http://localhost:4200/assets/adventure.json').subscribe({
+    this.http.get<any>('https://cosmic-book.vercel.app/assets/adventure.json').subscribe({
       next:(data)=>{
         // console.log('Fetched data:', data);
         if(Array.isArray(data.adventure)){
