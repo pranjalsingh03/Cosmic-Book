@@ -1,4 +1,4 @@
-a{
+a {
     text-decoration: none;
     color: black;
 }
@@ -76,29 +76,31 @@ a{
     border: none;
     padding: 10px;
     margin-bottom: 10px;
-  }
-  
-  .book-cover {
+}
+
+.book-cover {
     width: 50px;
     height: auto;
     margin-right: 10px;
     border-radius: 5px;
-  }
-  
-  .badge {
+}
+
+.badge {
     margin-right: 10px;
-  }
-  
-  h2 {
-    font-size: 24px;
+}
+
+h2 {
+    font-size: 30px;
     margin-bottom: 20px;
     color: white;
-  }
-  
-  .container {
+    padding: 1rem;
+}
+
+.container {
     margin-top: 50px;
-  }
-.fav-genres{
+}
+
+.fav-genres {
     padding: 2rem;
     color: wheat;
 }
