@@ -23,14 +23,14 @@ export class ReadComponent implements OnInit {
   }
 
   loadBookDetails(id: string) {
-    this.http.get<any>('http://localhost:4200/assets/book.json').subscribe({
+    this.http.get<any>('https://cosmic-book.vercel.app/assets/book.json').subscribe({
       next: (data) => {
-        console.log('Fetched data:', data);
+        // console.log('Fetched data:', data);
         if (Array.isArray(data.books)) {
           const book = data.books.find((item: any) => item.id === Number(id));
           if (book) {
             this.selectedBook = book;
-            console.log('Selected Book:', this.selectedBook);
+            // console.log('Selected Book:', this.selectedBook);
           } else {
             console.error('Book not found with ID:', id);
           }
