@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'] // Corrected to styleUrls
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
   books: any[]=[];
@@ -127,4 +127,7 @@ export class HomeComponent implements OnInit{
   goToBook(type: string, id: string) {
     this.router.navigate(['book', type, id]);
   }
+  goToDetailsPage(id: string) {
+    this.router.navigate(['/read', id]);
+  }  
 }

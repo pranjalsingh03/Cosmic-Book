@@ -119,6 +119,31 @@
     </div>
 </div>
 
+<div class="container">
+    <h2>Trendy this month</h2>
+    <div class="slider trendy-slider">
+        <div class="slide">
+            <div class="book-card" *ngFor="let book of books">
+                <img [src]="book.coverImage" alt="{{ book.title }}">
+                <div class="book-details">
+                    <h3>{{ book.title }}</h3>
+                    <p>{{ book.genre }}</p>
+                    <button class="btn btn-primary" (click)="goToDetailsPage(book.id)">Read More</button>
+                </div>
+            </div>
+            <div class="book-card" *ngFor="let book of books">
+                <img [src]="book.coverImage" alt="{{ book.title }}">
+                <div class="book-details">
+                    <h3>{{ book.title }}</h3>
+                    <p>{{ book.genre }}</p>
+                    <button class="btn btn-primary" (click)="goToDetailsPage(book.id)">Read More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-newsletter></app-newsletter>
 
 
 <app-footer></app-footer>
