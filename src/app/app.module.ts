@@ -13,6 +13,7 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import { BrowseComponent } from './pages/browse/browse.component';
+import { NewsletterComponent } from './pages/newsletter/newsletter.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -35,7 +36,8 @@ const routes: Routes = [
     ReadComponent,
     FooterComponent,
     SignupComponent,
-    BrowseComponent
+    BrowseComponent,
+    NewsletterComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
