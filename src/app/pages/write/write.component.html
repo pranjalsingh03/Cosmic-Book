@@ -1,4 +1,16 @@
 <app-header></app-header>
+<div class="write-banner">
+    <h1>How to publish a book on Cosmic-Book?</h1>
+    <button class="btn btn-primary">Start Writing</button>
+</div>
+<h1>{{title}}</h1>
+<div class="main-write">
+    <div class="card" *ngFor="let reason of reasons">
+        <img [src]="reason.image" [alt]="reason.alt">
+        <h2>{{reason.heading}}</h2>
+        <p>{{reason.description}}</p>
+    </div>
+</div>
 <div class="container">
     <h2>Add a New Book</h2>
     <form (submit)="submitBook()">
@@ -17,5 +29,6 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
+
 
 <app-footer></app-footer>

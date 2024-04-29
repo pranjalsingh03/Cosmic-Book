@@ -31,6 +31,67 @@
 label {
     color: white;
 }
-h2{
+
+h2 {
+    color: white;
+}
+
+h1 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    padding-top: 5rem;
+}
+
+.write-banner {
+    background-image: url(../../../assets/banner1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-write {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.card {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: #0e232f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    /* border-radius: 50%; */
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    color: wheat;
+}
+
+.card p {
     color: white;
 }
