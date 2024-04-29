@@ -29,6 +29,22 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
+<div class="container">
+    <h1>Words From our Readers</h1>
+    <div class="main-write">
+        <div class="" *ngFor="let review of reviews">
+                <img class="card-img-top" [src]="review.image" alt="{{ review.name }}">
+                <div class="card-body">
+                    <p class="card-text">{{ review.review }}</p>
+                    <p class="card-author">{{ review.name }}</p>
+                </div>
+        </div>
+    </div>
+</div>
 
+<div class="write-ban">
+    <h1>You too can write, publish, and give wings to your stories !</h1>
+    <button class="btn btn-primary">Start Writing</button>
+</div>
 
 <app-footer></app-footer>

@@ -15,6 +15,18 @@ export class WriteComponent {
         author: '',
         description: ''
     };
+    reviews= [
+        {
+            image: 'https://neovel.io/V1/user/avatar?userId=29357',
+            review: "I love this book! It's so well written and the characters are so well developed. I can't wait for the next chapter!",
+            name: 'Jane Doe',
+        },
+        {
+            image: 'https://neovel.io/V1/user/avatar?userId=8604',
+            review: "I love this book! It's so well written and the characters are so well developed. I can't wait for the next chapter!",
+            name: 'Jane Doe',
+        }
+    ];
     title = 'Why should you publish on Cosmic-Book?';
     reasons = [
         {
@@ -39,6 +51,18 @@ export class WriteComponent {
 
     submitBook() {
         console.log('Submitting book:', this.book);
+        const jsonData = JSON.stringify(this.book);
+        localStorage.setItem('bookData', jsonData);
+        
+        // Optional: Provide feedback to the user
+        alert('Book data saved successfully!');
+        
+        // Clear the form
+        this.book = {
+            title: '',
+            author: '',
+            description: ''
+        };
         this.router.navigate(['/']);
     }
 }

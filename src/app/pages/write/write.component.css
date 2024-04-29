@@ -41,7 +41,7 @@ h1 {
     display: flex;
     justify-content: center;
     font-weight: 500;
-    padding-top: 5rem;
+    padding-top: 6rem;
 }
 
 .write-banner {
@@ -94,4 +94,38 @@ h1 {
 
 .card p {
     color: white;
+}
+
+.card-img-top {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    float: right;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: white;
+}
+
+.card-author {
+    font-style: italic;
+    color: wheat;
+}
+
+.card-re {
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+.write-ban{
+    height: 40vh;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
