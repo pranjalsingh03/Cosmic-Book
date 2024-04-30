@@ -45,14 +45,15 @@ h1 {
 }
 
 .write-banner {
-    background-image: url(../../../assets/banner1.jpg);
+    background-image: url("https://neovel.io/assets/images/background_cover/write-neopload-banner.jpeg");
     background-size: cover;
+    object-fit: cover;
     background-position: center;
     height: 40vh;
-    /* display: flex; */
     align-items: center;
     justify-content: center;
     text-align: center;
+    z-index: 0;
 }
 
 .main-write {
@@ -83,7 +84,6 @@ h1 {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    /* border-radius: 50%; */
     margin-bottom: 10px;
 }
 
@@ -124,7 +124,6 @@ h1 {
 }
 .write-ban{
     height: 40vh;
-    /* display: flex; */
     align-items: center;
     justify-content: center;
     text-align: center;
