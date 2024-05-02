@@ -113,12 +113,28 @@ h2 {
     background-color:#16374a ;
     height: 42vh;
     padding: 4rem;
+    margin-top: 11rem;
 }
 
 .card-main{
     display: flex;
     justify-content: center;
     padding: 2rem;
+}
+
+.box-area{
+    background-color: #112631;
+    padding: 2rem;
+    border: solid 1px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+p{
+    color: white;
+
+}
+.card-cont{
+    margin-top: 10rem;
 }
 
 /* For mobile */
