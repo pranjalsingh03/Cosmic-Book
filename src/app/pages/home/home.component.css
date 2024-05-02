@@ -105,6 +105,22 @@ h2 {
     color: wheat;
 }
 
+.browser{
+    color: white;
+}
+
+.browser-cont{
+    background-color:#16374a ;
+    height: 42vh;
+    padding: 4rem;
+}
+
+.card-main{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
 /* For mobile */
 @media (max-width: 767px) {
     .cards-container {
